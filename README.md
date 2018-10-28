@@ -1,0 +1,1 @@
+curl -d '{"id":1,"firstName":"Steve","lastName":"Libonati","email":"steve.libonati@redhat.com","projectDescription":"new solar installation 1100 Princeton Drive Indian Land SC 29707"}' -H "Content-Type: application/json" -X POST http://localhost:8080/permits
