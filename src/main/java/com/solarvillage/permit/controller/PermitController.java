@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,12 +27,7 @@ public class PermitController {
 		return permitService.create(permit);
 
 	}
-	/*
-	@PutMapping("${context-path}/permits/{id}")
-	Permit update(@RequestBody Permit permit, @PathVariable Long id) {
-		return permitService.update(permit);
-	}
-	*/
+
 	@DeleteMapping("${context-path}/permits/{id}")
 	void deletePermit(@PathVariable Long id) {
 		permitService.delete(id);
