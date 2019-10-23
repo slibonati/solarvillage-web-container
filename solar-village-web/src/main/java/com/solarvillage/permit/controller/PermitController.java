@@ -17,18 +17,18 @@ public class PermitController {
 	@Autowired
 	private PermitService permitService;
 
-	@GetMapping("${context-path}/permits/{id}")
+	@GetMapping("/permits/{id}")
 	public Permit get(@PathVariable Long id) {
 		return permitService.get(id);
 	}
 
-	@PostMapping("${context-path}/permits")
+	@PostMapping("/permits")
 	Permit newPermit(@RequestBody Permit permit) {
 		return permitService.create(permit);
 
 	}
 
-	@DeleteMapping("${context-path}/permits/{id}")
+	@DeleteMapping("/permits/{id}")
 	void deletePermit(@PathVariable Long id) {
 		permitService.delete(id);
 	}
